@@ -105,13 +105,22 @@ export default function MovieCard({ details }) {
     e.target.src = "/images/no_img.png";
   };
 
+  const displayValue = (value) => {
+    if (Array.isArray(value)) {
+      return value.map((obj, i) => {
+        return <div key={i}>{`${obj.Source}: ${obj.Value}`}</div>;
+      });
+    }
+    return value;
+  };
+
   const generateTableContent = () => {
     return Object.keys(details).map((key, i) => {
-      if (typeof details[key] === "string" && key !== "Poster") {
+      if (key !== "Poster") {
         return (
           <tr key={i}>
             <td>{key}</td>
-            <td class="table-value">{details[key]}</td>
+            <td class="table-value">{displayValue(details[key])}</td>
           </tr>
         );
       }
