@@ -138,7 +138,12 @@ export default function MovieCard({ details }) {
           </FlexBox>
           <PosterOverviewWrap>
             <div className="wrap">
-              <img width="250px" height="auto" src={Poster} />
+              <img
+                onError={addDefaultSrc}
+                width="250px"
+                height="auto"
+                src={Poster}
+              />
             </div>
             <div>
               <DetailsTable>
