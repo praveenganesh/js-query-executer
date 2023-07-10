@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:regular,bold,italic&subset=latin,latin-ext');
+
+body{
+  background-color: #171717;
+  color: white;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
